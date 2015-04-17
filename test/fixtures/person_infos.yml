@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  cardId: 
+  accessTime: 2015-04-17 21:52:42
+  endTime: 2015-04-17 21:52:42
+  machineId: 1
+  userId: 1
+
+two:
+  name: 
+  cardId: 
+  accessTime: 2015-04-17 21:52:42
+  endTime: 2015-04-17 21:52:42
+  machineId: 1
+  userId: 1

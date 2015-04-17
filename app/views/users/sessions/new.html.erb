@@ -1,0 +1,26 @@
+<div id="login-wraper">
+  <form class="form login-form">
+      <legend>Login in to <span class="blue">GWSecurity</span></legend>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %> 
+      <div class="body">
+        <div class="form-group">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+      </div>
+      <div class="footer">
+          <label class="checkbox inline">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+          </label>
+                      
+          <%= f.submit "Log in", :class =>'btn btn-default' %>
+      </div>
+          <%= render "users/shared/links" %>
+      <%end%>
+  </form>
+</div>
