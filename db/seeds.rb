@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+ PermissionSheet.create!(:permissionType => "Admin")
+ PermissionSheet.create!(:permissionType => "Manager")
+ PermissionSheet.create!(:permissionType => "Coach")
+ PermissionSheet.create!(:permissionType => "Member")
+ 

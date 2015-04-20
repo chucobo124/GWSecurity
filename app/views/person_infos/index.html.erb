@@ -1,7 +1,10 @@
 <h1>PersonInfos#index</h1>
+<%= link_to('PersonInfo', new_person_info_path, :method => :get) %>  
 <p><%= @PersonInfo.name%></p>
-<p><%= @PersonInfo.cardId%></p>
+<p><%= @PersonInfo.phone%></p>
+<p><%= @PersonInfo.facebook%></p>
+<p><%= @PersonInfo.line%></p>
 <p><%= @PersonInfo.created_at%></p>
 <p><%= @PersonInfo.accessTime%></p>
 <p><%= @PersonInfo.endTime%></p>
-<p>Find me in app/views/person_infos/index.html.erb</p>
+<p><%= @Permission%></p>

@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
-	before_action :authenticate_user!
+	layout "mainMenu"
   def index
   end
 end

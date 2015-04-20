@@ -11,20 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417135242) do
+ActiveRecord::Schema.define(version: 20150420170233) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "person_infos", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "cardId"
+  create_table "permission_sheets", force: :cascade do |t|
+    t.string   "cardId"
+    t.string   "permissionType"
     t.datetime "accessTime"
     t.datetime "endTime"
-    t.integer  "machineId"
+    t.integer  "permissionAreaId"
     t.integer  "userId"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "person_infos", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "accessTime"
+    t.datetime "endTime"
+    t.integer  "userId"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "phone"
+    t.string   "facebook"
+    t.string   "line"
+    t.string   "permissionId"
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,6 +53,8 @@ ActiveRecord::Schema.define(version: 20150417135242) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "permissionId",           default: 4
+    t.integer  "machineRoleId"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

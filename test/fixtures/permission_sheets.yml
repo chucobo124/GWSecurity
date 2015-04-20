@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cardId: MyString
+  permissionType: 1
+  accessTime: 2015-04-20 23:44:36
+  endTime: 2015-04-20 23:44:36
+  permissionAreaId: 1
+  personId: 1
+
+two:
+  cardId: MyString
+  permissionType: 1
+  accessTime: 2015-04-20 23:44:36
+  endTime: 2015-04-20 23:44:36
+  permissionAreaId: 1
+  personId: 1

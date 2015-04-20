@@ -1,0 +1,13 @@
+<%= form_for @PersonInfo, :url =>person_info_path(@currentUser), :method => :patch   do |f|%>
+	<%= f.label :name%>
+	<%= f.text_field :name%><br/>
+	<%= @email%><br/>
+	<%= f.label :phone%>
+	<%= f.text_field :phone%><br/>
+	<%= f.label :facebook%>
+	<%= f.text_field :facebook%><br/>
+	<%= f.label :line%>
+	<%= f.text_field :line%><br/>	
+	<%= f.submit%>
+	<%= link_to "back to index" ,person_infos_path%>
+<%end%>
