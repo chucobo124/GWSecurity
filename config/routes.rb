@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'permission_sheet/index'
+  get 'tarning/index'
 
   devise_for :users, controllers: {sessions: "users/sessions" , registrations: "users/registrations"}
   resources :homes

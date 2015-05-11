@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  machineId: 1
+  userId: 1
+  machineAccessTime: 2015-04-21 21:12:39
+
+two:
+  machineId: 1
+  userId: 1
+  machineAccessTime: 2015-04-21 21:12:39

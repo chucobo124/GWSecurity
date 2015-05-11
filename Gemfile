@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'serialport'
+gem 'cancan'
 # Use Unicorn as the app server
 # gem 'unicorn'
 gem 'bootstrap-sass', '~> 3.2.0'

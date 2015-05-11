@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420170233) do
+ActiveRecord::Schema.define(version: 20150421140438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "machine_details", force: :cascade do |t|
+    t.string   "name"
+    t.string   "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "machine_roles", force: :cascade do |t|
+    t.integer  "machineId"
+    t.integer  "userId"
+    t.datetime "machineAccessTime"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "page_manage_paths", force: :cascade do |t|
+    t.string   "pageName"
+    t.integer  "permissionId"
+    t.boolean  "allowPermission"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "permission_sheets", force: :cascade do |t|
     t.string   "cardId"
@@ -59,5 +82,14 @@ ActiveRecord::Schema.define(version: 20150420170233) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "work_shop_sheets", force: :cascade do |t|
+    t.boolean  "workShopAvailable"
+    t.integer  "machineId"
+    t.integer  "userId"
+    t.datetime "workShopAccessTime"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
 
 end

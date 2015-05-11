@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%=request.original_fullpath%>
 This is main menu
 <%= link_to('Logout', destroy_user_session_path, :method => :delete) %> 
 <%= link_to('PersonInfo', person_infos_path, :method => :get) %>

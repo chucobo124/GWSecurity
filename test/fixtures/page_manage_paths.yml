@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pageName: MyString
+  permissionId: 1
+  allowPermission: false
+
+two:
+  pageName: MyString
+  permissionId: 1
+  allowPermission: false

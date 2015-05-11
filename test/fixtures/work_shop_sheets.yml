@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  workShopAvailable: false
+  machineId: 1
+  userId: 1
+  workShopAccessTime: 2015-04-21 21:24:25
+
+two:
+  workShopAvailable: false
+  machineId: 1
+  userId: 1
+  workShopAccessTime: 2015-04-21 21:24:25

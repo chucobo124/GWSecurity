@@ -1,7 +1,8 @@
 class PersonInfosController < ApplicationController
 before_action :getPersonInfo  
   def index
-  	render :layout => "mainMenu"
+  	render :layout => "mainMenu" 
+    @url =request.url
   end
 
   def new
