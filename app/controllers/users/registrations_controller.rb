@@ -12,11 +12,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
     super
     if resource.save
       resourceId = User.resourceId(params)
-      personInfo = PersonInfo.new(userId: resourceId)
+      permissionId = User.saveSuperUserPermission(resourceId)
+      personInfo = PersonInfo.new(userId: resourceId , permissionId: permissionId)
       personInfo.save
     end
   end
-
   # GET /resource/edit
   # def edit
   #   super

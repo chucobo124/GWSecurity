@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'machine_list/index'
+
   get 'tarning/index'
 
   devise_for :users, controllers: {sessions: "users/sessions" , registrations: "users/registrations"}

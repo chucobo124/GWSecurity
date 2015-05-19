@@ -76,7 +76,7 @@ ActiveRecord::Schema.define(version: 20150421140438) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "permissionId",           default: 4
+    t.integer  "permissionId"
     t.integer  "machineRoleId"
   end
 

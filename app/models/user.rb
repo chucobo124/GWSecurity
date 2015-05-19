@@ -8,4 +8,15 @@ class User < ActiveRecord::Base
   def self.resourceId(params)
 		self.select(:id).where(email: params[:user][:email]).take.id
 	end
+  def self.saveSuperUserPermission(id)
+  	if id == 1
+        currentUser = User.find(id)
+        currentUser.update(:permissionId => id)
+  		return id
+  	else
+       id = 4
+       currentUser.update(:permissionId => id)
+  		return id
+  	end
+  end
 end
