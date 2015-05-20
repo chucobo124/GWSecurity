@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   def self.resourceId(params)
 		self.select(:id).where(email: params[:user][:email]).take.id
 	end
+
   def self.saveSuperUserPermission(id)
   	if id == 1
         currentUser = User.find(id)

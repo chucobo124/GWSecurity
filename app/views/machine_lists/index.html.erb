@@ -1,0 +1,6 @@
+<h1>Give me a Command</h1>
+<%= form_tag(machine_lists_path, method: "get") do %>
+  <%= label_tag(:commandLine) %>
+  <%= text_field_tag(:commandLine) %>
+  <%= submit_tag("submit") %>
+<% end %>
