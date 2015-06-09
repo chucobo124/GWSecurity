@@ -7,7 +7,40 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
+
+<div class="container-inverse">
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to 'GWSecurity', root_path, class: 'navbar-brand' %>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li> <%= link_to('Home', homes_path, :method => :get) %> </li>
+
+          <% if current_user %>
+
+          <li> <%= link_to('PersonInfo', person_infos_path, :method => :get) %> </li>
+          <li> <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  </li>
+
+          <% else %>
+
+          <li> <%= link_to('Login', new_user_session_path, :method => :get) %> </li>
+          <li> <%= link_to('Sign up', new_user_registration_path, :method => :get) %> </li>
+
+          <% end %>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <%=request.original_fullpath%>
+  <%= yield %>
+</div>
 
 </body>
 </html>
