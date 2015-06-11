@@ -1,0 +1,31 @@
+<div class="col-md-8 col-md-offset-2">
+  <h1>新增 Sensor</h1>
+
+  <hr>
+  <%= form_for @sensor, :html => {:class => 'form-horizontal'} do |f| %>
+    <div class="form-group">
+      <div class="col-md-2">
+        <%= f.label :name, input_html: {} %>
+      </div>
+      <div class="col-md-4">
+        <%= f.text_field :name, input_html: {class: "form-control"}, size: 60 %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-2">
+        <%= f.label :description, input_html: {} %>
+      </div>
+      <div class="col-md-4">
+        <%= f.text_area :description, cols: 60, rows: 5, input_html: {class: "form-control"} %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-8 col-md-offset-2">
+        <%= f.submit :class => "btn btn-primary" %>
+      </div>
+    </div>
+
+  <% end %>
+</div>
