@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= button_to 'Edit', edit_sensor_path, :method => :get, class: 'btn btn-primary' %>
+    <br/>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><label>Sensor ID</label></td>
+          <td><%= @sensor.id %></td>
+        </tr>
+        <tr>
+          <td><label>Sensor Name</label></td>
+          <td><%= @sensor.name %></td>
+        </tr>
+        <tr>
+          <td><label>Description</label></td>
+          <td><%= @sensor.description %></td>
+        </tr>
+        <tr>
+          <td><label>API Key</label></td>
+          <td><%= @sensor.api_key %></td>
+        </tr>
+        <tr>
+          <td><label>Created</label></td>
+          <td><%= @sensor.created_at %></td>
+        </tr>
+        <tr>
+          <td><label>Updated</label></td>
+          <td><%= @sensor.updated_at %></td>
+        </tr>
+        <tr>
+          <td><label>v1 Name</label></td>
+          <td><%= @sensor.v1_name %></td>
+        </tr>
+        <tr>
+          <td><label>v1 Unit</label></td>
+          <td><%= @sensor.v1_unit %></td>
+        </tr>
+        <tr>
+          <td><label>v2 Name</label></td>
+          <td><%= @sensor.v2_name %></td>
+        </tr>
+        <tr>
+          <td><label>v2 Unit</label></td>
+          <td><%= @sensor.v2_unit %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
