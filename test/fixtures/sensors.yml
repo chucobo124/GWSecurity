@@ -1,11 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyText
-  apiKey: MyString
+  name: "Main Power"
+  description: "主電源"
+  apiKey: "1234567890123456"
+  v1_name: "電壓"
+  v1_unit: "V"
+  v2_name: "電流"
+  v2_unit: "A"
 
 two:
-  name: MyString
-  description: MyText
-  apiKey: MyString
+  name: "CNC-1"
+  description: "CNC #1"
+  apiKey: "WDXOEFKGK1DZ5S7J"
+  v1_name: "轉速"
+  v1_unit: "RPM"
+  v2_name: "溫度"
+  v2_unit: "C"

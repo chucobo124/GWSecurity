@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609210001) do
+ActiveRecord::Schema.define(version: 20150609210002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,16 @@ ActiveRecord::Schema.define(version: 20150609210001) do
     t.string   "line"
     t.string   "permissionId"
   end
+
+  create_table "sensor_logs", force: :cascade do |t|
+    t.integer  "sensor_id"
+    t.string   "v1"
+    t.string   "v2"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "sensor_logs", ["sensor_id"], name: "index_sensor_logs_on_sensor_id", using: :btree
 
   create_table "sensors", force: :cascade do |t|
     t.string   "name"

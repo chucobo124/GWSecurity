@@ -9,12 +9,13 @@
   <div class="col-md-12">
     <table class="table table-hover table-striped table-bordered">
     <thead>
-    <tr class="info">
+    <tr class="bg-primary">
       <th>#</th>
       <th>Name</th>
       <th>Created</th>
       <th>Updated</th>
       <th>API Key</th>
+      <th>Data Cnt.</th>
     </tr>
     </thead>
     <tbody>
@@ -25,6 +26,7 @@
         <td><%= sensor.created_at.strftime("%Y-%m-%d") %></td>
         <td><%= sensor.updated_at.strftime("%Y-%m-%d") %></td>
         <td><%= sensor.api_key %></td>
+        <td><%= sensor.sensor_logs.count %></td>
       </tr>
       <% end %>
     </tbody>
