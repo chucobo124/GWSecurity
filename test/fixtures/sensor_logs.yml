@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sensor_id: 1
+  v1: "111"
+  v2: "11"
+
+two:
+  sensor_id: 2
+  v1: "2222"
+  v2: "32"
