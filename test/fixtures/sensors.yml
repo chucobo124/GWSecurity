@@ -3,7 +3,7 @@
 one:
   name: "Main Power"
   description: "主電源"
-  apiKey: "1234567890123456"
+  api_key: "1234567890123456"
   v1_name: "電壓"
   v1_unit: "V"
   v2_name: "電流"
@@ -12,7 +12,7 @@ one:
 two:
   name: "CNC-1"
   description: "CNC #1"
-  apiKey: "WDXOEFKGK1DZ5S7J"
+  api_key: "WDXOEFKGK1DZ5S7J"
   v1_name: "轉速"
   v1_unit: "RPM"
   v2_name: "溫度"
