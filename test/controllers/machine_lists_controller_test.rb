@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class MachineListControllerTest < ActionController::TestCase
+class MachineListsControllerTest < ActionController::TestCase
   test "should get index" do
     sign_in users(:user1)
     get :index
