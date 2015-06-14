@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150609210002) do
+ActiveRecord::Schema.define(version: 20150613140001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cards", force: :cascade do |t|
+    t.integer  "user_info_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "cards", ["user_info_id"], name: "index_cards_on_user_info_id", using: :btree
 
   create_table "machine_details", force: :cascade do |t|
     t.string   "name"
