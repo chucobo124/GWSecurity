@@ -20,8 +20,7 @@ private
   def getPersonInfo
   	@currentUser = current_user.id
   	@PersonInfo = PersonInfo.myacount(@currentUser)
-    permissionId =current_user.permissionId
-    @Permission = PermissionSheet.where(id: permissionId).take.permissionType
+    @Permission = current_user.permission_sheet.permissionType
   end
 
   def getPersonParams

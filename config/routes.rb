@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :homes
   resources :person_infos
   resources :machine_lists
+  resources :permission_sheet
 
   resources :sensors
 
