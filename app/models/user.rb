@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_one :personInfo
+  belongs_to :permission_sheet, :foreign_key => 'permissionId'
 
   def self.resourceId(params)
 		self.select(:id).where(email: params[:user][:email]).take.id

@@ -3,7 +3,9 @@
 user1:
   id: 1
   email: "allen@mail.com"
+  permissionId: 1
 
 user2:
   id: 2
   email: "john@mail.com"
+  permissionId: 4
