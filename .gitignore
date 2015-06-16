@@ -50,3 +50,5 @@ bower.json
 .powenv
 
 .DS_Store
+
+/public/assets
