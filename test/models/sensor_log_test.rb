@@ -4,8 +4,7 @@ class SensorLogTest < ActiveSupport::TestCase
 
   def setup
     @sensor = Sensor.new(
-      :id => 1, 
-      :name => 'Main Power', 
+      :name => 'Main Power',
       :api_key => '1234567890123456',
       :v1_name => 'AC 110',
       :v1_unit => 'V',
