@@ -3,7 +3,7 @@ require 'test_helper'
 class SensorTest < ActiveSupport::TestCase
 
   def setup
-    @sensor = Sensor.new(:id => 1, :name => 'Main Power', :api_key => ('X'*16))
+    @sensor = Sensor.new(:name => 'Main Power', :api_key => ('X'*16))
   end
 
   test "valid model" do
