@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  # url: <%= ENV['GWSECURITY_DATABASE_URL'] %>
   database: GWSecurity_production
-  username: GWSecurity
+  username: <%= ENV['GWSECURITY_DATABASE_USERNAME'] %>
   password: <%= ENV['GWSECURITY_DATABASE_PASSWORD'] %>
