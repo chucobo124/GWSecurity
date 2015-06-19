@@ -14,14 +14,16 @@ require 'capistrano/deploy'
 #   https://github.com/capistrano/bundler
 #   https://github.com/capistrano/rails
 #   https://github.com/capistrano/passenger
+#   https://github.com/capistrano-plugins/capistrano-unicorn-nginx
 #
-# require 'capistrano/rvm'
+require 'capistrano/rvm'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
-# require 'capistrano/bundler'
-# require 'capistrano/rails/assets'
-# require 'capistrano/rails/migrations'
+require 'capistrano/bundler'
+require 'capistrano/rails/assets'
+require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
+require 'capistrano/unicorn_nginx'
 
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
