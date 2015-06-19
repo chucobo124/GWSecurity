@@ -54,3 +54,4 @@ bower.json
 
 .env
 
+config/database.yml
