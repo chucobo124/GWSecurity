@@ -1,2 +1,18 @@
-<h1>Homes#index</h1>
-<p>Find me in app/views/homes/index.html.erb</p>   
+<div class="row">
+  <div class="col-md-4">
+    <h1>統計資訊</h1>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>目前 Sensor 總數量</td>
+          <td><%= Sensor.count %></td>
+        </tr>
+        <tr>
+          <td>目前 Sensor Log 總數量</td>
+          <td><%= SensorLog.count %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
