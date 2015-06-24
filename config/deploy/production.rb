@@ -1,3 +1,4 @@
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
@@ -6,7 +7,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
-
+server ENV['CAP3_DEPLOY_PRODUCTION_SERVER'], user: fetch(:deploy_user), roles: %w{app db web}, primary: true
 
 
 # role-based syntax
