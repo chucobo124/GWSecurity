@@ -60,3 +60,9 @@ server ENV['CAP3_DEPLOY_PRODUCTION_SERVER'], user: fetch(:deploy_user), roles: %
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+
+# for capistrano-unicorn-nginx
+# ============================
+# https://github.com/bruno-/capistrano-unicorn-nginx
+set :nginx_server_name, ENV['CAP3_DEPLOY_NGINX_SERVER_NAME_PRODUCTION']
+# set :unicorn_workers, 2

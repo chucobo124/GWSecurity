@@ -5,7 +5,7 @@ Dotenv.load
 lock '3.4.0'
 
 set :application, 'gwsecurity'
-set :repo_url, 'https://github.com/chucobo124/GWSecurity.git'
+set :repo_url, ENV['CAP3_DEPLOY_REPO_URL']
 set :deploy_user, ENV['CAP3_DEPLOY_USER']
 set :deploy_production_server, ENV['CAP3_DEPLOY_PRODUCTION_SERVER']
 
@@ -38,6 +38,12 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 
 # Default value for keep_releases is 5
 set :keep_releases, 3
+
+# for capistrano-unicorn-nginx
+# ============================
+# https://github.com/bruno-/capistrano-unicorn-nginx
+set :unicorn_workers, 2
+set :unicorn_service, "unicorn_#{fetch(:application)}_#{fetch(:stage)}"
 
 namespace :deploy do
 
