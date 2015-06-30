@@ -64,5 +64,9 @@ server ENV['CAP3_DEPLOY_PRODUCTION_SERVER'], user: fetch(:deploy_user), roles: %
 # for capistrano-unicorn-nginx
 # ============================
 # https://github.com/bruno-/capistrano-unicorn-nginx
-set :nginx_server_name, ENV['CAP3_DEPLOY_NGINX_SERVER_NAME_PRODUCTION']
+if ENV['CAP3_DEPLOY_NGINX_SERVER_NAME_PRODUCTION']
+  unless ENV['CAP3_DEPLOY_NGINX_SERVER_NAME_PRODUCTION'].empty?
+    set :nginx_server_name, ENV['CAP3_DEPLOY_NGINX_SERVER_NAME_PRODUCTION']
+  end
+end
 # set :unicorn_workers, 2
