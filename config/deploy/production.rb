@@ -70,3 +70,4 @@ if ENV['CAP3_DEPLOY_NGINX_SERVER_NAME_PRODUCTION']
   end
 end
 # set :unicorn_workers, 2
+set :unicorn_logrotate_enabled, true
