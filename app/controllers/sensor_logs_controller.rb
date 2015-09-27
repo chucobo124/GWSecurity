@@ -2,6 +2,11 @@ class SensorLogsController < ApplicationController
 
   before_action :authenticate_user!, :except => [:create]
 
+  def index
+    @sensor = Sensor.find(params[:sensor_id])
+    @sensor_logs = @sensor.sensor_logs.order('id DESC').page params[:page]
+  end
+
   def create
     @sensor = Sensor.find_by_api_key(sensor_log_params[:key])
     # redirect_to sensor_path(@sensor.id)
