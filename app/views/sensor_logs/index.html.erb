@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>Sensor logs</h3>
+  </div>
+
+  <div class="col-md-12">
+    <%= paginate @sensor_logs %>
+  </div>
+
+  <div class="col-md-12">
+    <table class="table table-hover table-striped table-bordered">
+      <thead>
+        <tr class="bg-primary">
+          <th>#</th>
+          <th><%= if @sensor.v1_name.present? then @sensor.v1_name else 'N/A' end %> (<%= if @sensor.v1_unit.present? then @sensor.v1_unit else '*' end %>)</th>
+          <th><%= if @sensor.v2_name.present? then @sensor.v2_name else 'N/A' end %> (<%= if @sensor.v2_unit.present? then @sensor.v2_unit else '*' end %>)</th>
+          <th>Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @sensor_logs.each_with_index do |row, idx| %>
+        <tr>
+          <td><%= ((@sensor_logs.current_page - 1) * @sensor_logs.page.size) + idx + 1 %></td>
+          <td><%= row.v1 %></td>
+          <td><%= row.v2 %></td>
+          <td><%= row.created_at %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+size <%= @sensor_logs.current_page %>
+  </div>
+</div>

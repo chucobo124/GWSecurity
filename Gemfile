@@ -30,6 +30,9 @@ gem 'devise'
 gem 'serialport'
 gem 'cancan'
 
+# 分頁
+gem 'kaminari'
+
 group :production do
   # Use Unicorn as the app server
   gem 'unicorn'

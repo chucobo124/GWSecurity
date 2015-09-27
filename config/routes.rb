@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   resources :machine_lists
   resources :permission_sheet
 
-  resources :sensors
+  # get 'sensors/:sensor_id/sensor_logs' => 'sensor_logs#index'
+  resources :sensors do
+    resources :sensor_logs
+  end
 
   # 接收資料用
   match 'sendlog', :to => 'sensor_logs#create', :via => [:get, :post]
