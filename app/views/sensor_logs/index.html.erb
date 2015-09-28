@@ -1,12 +1,22 @@
 <div class="row">
   <div class="col-md-12">
+    <%= button_to 'Sensor Detail', sensor_path(@sensor.id), :method => :get, class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
     <h3>Sensor logs</h3>
   </div>
+</div>
 
+<div class="row">
   <div class="col-md-12">
     <%= paginate @sensor_logs %>
   </div>
+</div>
 
+<div class="row">
   <div class="col-md-12">
     <table class="table table-hover table-striped table-bordered">
       <thead>
