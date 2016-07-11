@@ -10,6 +10,7 @@ before_install:
   - sudo /etc/init.d/postgresql stop
   - sudo /etc/init.d/postgresql start 9.3
 before_script:
+  - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
   - bin/setup
 script:
