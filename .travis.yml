@@ -1,0 +1,11 @@
+language: ruby
+
+rvm:
+  - 2.1.5
+
+before_script:
+  - bin/setup
+
+script:
+  - bin/rake test
+
