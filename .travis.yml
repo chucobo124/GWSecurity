@@ -1,11 +1,20 @@
 language: ruby
-
+services:
+  - postgresql
 rvm:
   - 2.1.5
 
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install language-pack-es
+  - sudo /etc/init.d/postgresql stop
+  - sudo /etc/init.d/postgresql start 9.3
 before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database travis_ci_test;' -U postgres
   - bin/setup
-
 script:
   - bin/rake test
 
+addons:
+  postgresql: "9.3"
