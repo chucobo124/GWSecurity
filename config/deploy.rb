@@ -2,7 +2,7 @@ require 'dotenv'
 Dotenv.load
 
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.4.1'
 
 set :application, 'gwsecurity'
 set :repo_url, ENV['CAP3_DEPLOY_REPO_URL']
