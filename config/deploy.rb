@@ -2,9 +2,10 @@ require 'dotenv'
 Dotenv.load
 
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.4.1'
 
 set :application, 'gwsecurity'
+
 set :repo_url, ENV['CAP3_DEPLOY_REPO_URL']
 set :deploy_user, ENV['CAP3_DEPLOY_USER']
 set :deploy_production_server, ENV['CAP3_DEPLOY_PRODUCTION_SERVER']
@@ -25,7 +26,8 @@ set :scm, :git
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+# fix cap deploy error "sudo: no tty present and no askpass program specified"
+set :pty, true
 
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push('.env', 'config/database.yml')
